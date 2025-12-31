@@ -49,18 +49,23 @@ python ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github
   --repo <owner>/skills --path <nombre-skill> --method git
 ```
 
-## Plantilla nueva skill
+## Plantillas
 
-Estructura minima:
-```
-<nombre-skill>/
-  SKILL.md
-  scripts/           (opcional)
-  references/        (opcional)
-  assets/            (opcional)
+Plantilla base de SKILL.md:
+- SKILL_TEMPLATE.md
+
+Skeleton completo:
+- templates/skill/
+
+Ejemplo (PowerShell):
+```powershell
+Copy-Item -Recurse templates\skill <nombre-skill>
 ```
 
-SKILL.md debe incluir frontmatter con name y description.
+Ejemplo (bash):
+```bash
+cp -r templates/skill <nombre-skill>
+```
 
 Despues:
 ```bash
